@@ -19,7 +19,7 @@
         <label for="url" class="form-label">Ingrese la URL</label>
       </div>
       <div class="col-12 col-sm-8 col-md-6 col-lg-4">
-        <input class="form-control" type="text" name="url" id="url">
+        <input class="form-control" type="url" name="fullUrl" id="fullUrl">
       </div>
       <div class="col-12 mt-2">
         <button class="btn btn-success" type="submit">Acortar</button>
@@ -35,11 +35,11 @@
         </tr>
       </thead>
       <tbody>
-        <% shortUrl.forEach((e, index) => { %>
+        <% shortUrls.forEach((e, index) => { %>
           <tr>
             <th scope="row"><%= index + 1 %></th>
-            <td><a href="<%= e.full %>" target="_blank"><%= e.full %></a></td>
-            <td><a href="/<%= e.short %>" target="_blank">https://<%= e.short %></a></td>            
+            <td><a href="/<%= e.full %>" target="_blank"><%= e.full %></a></td>
+            <td><a href="/<%= e.short %>" target="_blank"><%= e.short %></a></td>            
           </tr>
         <% }); %>
       </tbody>
